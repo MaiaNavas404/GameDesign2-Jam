@@ -13,27 +13,19 @@ public class EnemyScript : MonoBehaviour
         Attack
     };
     
-    private float _spawnYLevelVariation;
+
     private States _state;
 
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
     [SerializeField] private BoxCollider2D attackTrigger;
-    [SerializeField] private Vector2 yLevelspawnVarition;
     [SerializeField] private float speed = 10;
     [SerializeField] private float health = 100;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        _spawnYLevelVariation =  Random.Range(yLevelspawnVarition.x,yLevelspawnVarition.y);
-        transform.Translate(0,_spawnYLevelVariation,0);
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"{health},{_state}");
         switch (_state)
         {
             case States.Move:
@@ -62,7 +54,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.("Tower"))
+        if (other.collider.CompareTag("Tower"))
         {
             _state = States.Attack;
             animator.Play("attack");

@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class EnemyHurtBox : MonoBehaviour
 {
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("OnTriggerStay2D");
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyScript>().TakeDamage(1);
+            other.GetComponent<EnemyScript>().TakeDamage(0.5f);
         }
     }
 }
