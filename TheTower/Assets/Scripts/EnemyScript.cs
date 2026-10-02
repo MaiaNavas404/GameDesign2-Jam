@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Color = UnityEngine.Color;
 using Random = UnityEngine.Random;
 
 public class EnemyScript : MonoBehaviour
@@ -14,12 +15,12 @@ public class EnemyScript : MonoBehaviour
     
     private float _spawnYLevelVariation;
     private States _state;
-  
-    [SerializeField] private CapsuleCollider2D collider2D;
+
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
     [SerializeField] private BoxCollider2D attackTrigger;
     [SerializeField] private Vector2 yLevelspawnVarition;
     [SerializeField] private float speed = 10;
-    [SerializeField] private float attackCooldown = 0.5f;
     [SerializeField] private float health = 100;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -52,13 +53,19 @@ public class EnemyScript : MonoBehaviour
         transform.Translate(-speed * Time.deltaTime ,0,0);
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
+        spriteRenderer.color = Color.Lerp(Color.darkRed, Color.white, health / 100);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        _state = States.Attack;
+        if (other.CompareTag("Tower"))
+        {
+            _state = States.Attack;
+            animator.Play("attack");
+        }
+
     }
 }
