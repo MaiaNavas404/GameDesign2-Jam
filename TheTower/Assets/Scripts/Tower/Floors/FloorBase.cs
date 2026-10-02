@@ -1,29 +1,15 @@
 using UnityEngine;
 
-public class FloorBase : MonoBehaviour
+public partial class FloorBase : MonoBehaviour
 {
     [SerializeField]Transform _graphicsTransf;
     Camera _cam;
     Tower _tower;
+    FloorFSM _fsm;
 
     [SerializeField]float _hoveredSizeMult;
     [SerializeField]GameObject _hoverInfo;
-    bool _isHoveredValue;
-    bool _isHovered
-    {
-        get {return _isHoveredValue;}
-        set
-        {
-            if (_isHoveredValue == value) return;
-
-            _isHoveredValue = value;
-
-            if (value) transform.localScale = _hoveredSizeMult * Vector3.one;
-            else transform.localScale = Vector3.one;
-
-            _hoverInfo.SetActive(value);
-        }
-    }
+    bool _isHovered;
 
     InputSystem_Actions _actions;
     Vector2 _mousePos;
@@ -42,6 +28,7 @@ public class FloorBase : MonoBehaviour
         };
 
         _cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        _fsm = new(this);
     }
 
     void OnEnable()
@@ -57,11 +44,13 @@ public class FloorBase : MonoBehaviour
     {
         Vector3 delta = _cam.ScreenToWorldPoint(_mousePos) - transform.position;
         _isHovered = Mathf.Abs(delta.x) < _graphicsTransf.localScale.x / 2 && Mathf.Abs(delta.y) < _graphicsTransf.localScale.y / 2;
+
+        _fsm.Update(Time.deltaTime);
     }
 
     public virtual void Trigger ()
     {
-        Debug.Log(gameObject.name + "  " + Time.time);
+        //Debug.Log(gameObject.name + "  " + Time.time);
     }
 
     public void Initialize(Tower tower)
