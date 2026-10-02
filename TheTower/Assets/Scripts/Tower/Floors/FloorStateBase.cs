@@ -22,5 +22,9 @@ public partial class FloorBase
         public virtual void OnExit() {}
 
         public virtual void Update(float deltaTime) {}
+
+        public virtual void RightClick() {}
+        public virtual void LeftClick() {}
+        public virtual void StopLeftClick () {}
     }
 }

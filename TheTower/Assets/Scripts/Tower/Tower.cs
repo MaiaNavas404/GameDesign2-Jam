@@ -45,7 +45,7 @@ public partial class Tower : MonoBehaviour
         }
     }
 
-    void OnFloorsChanged ()
+    public void OnFloorsChanged ()
     {
         for (int n = 0; n < _floors.Count; n++)
         {
