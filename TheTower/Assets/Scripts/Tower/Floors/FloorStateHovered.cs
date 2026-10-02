@@ -26,5 +26,19 @@ public partial class FloorBase
 
             base.Update(deltaTime);
         }
+
+        public override void RightClick()
+        {
+            Context.Sell();
+
+            base.RightClick();
+        }
+
+        public override void LeftClick()
+        {
+            FSM.ChangeTo(FSM.HoldDraggingState);
+
+            base.LeftClick();
+        }
     }
 }

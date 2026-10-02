@@ -219,7 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _graphicsTransf: {fileID: 3481706784612567137}
-  _hoveredSizeMult: 1.1
+  _hoveredSizeMult: 1.05
+  _draggedSizeMult: 1.1
   _hoverInfo: {fileID: 5305736778732851957}
 --- !u!1 &2636542036681187903
 GameObject:
