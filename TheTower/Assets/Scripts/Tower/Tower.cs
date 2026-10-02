@@ -1,16 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public partial class Tower : MonoBehaviour
 {
+    [SerializeField]float _cooldownTime;
+    [SerializeField]float _triggerTime;
     [SerializeField]int _maxFloors = 4;
     [SerializeField]GameObject _floorObject;
     [SerializeField]GameObject _floorObject2;
     List<FloorBase> _floors = new();
 
+    TowerFSM _fsm;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _fsm = new(this);
+
         AddFloor(_floorObject);
         AddFloor(_floorObject2);
         AddFloor(_floorObject);
@@ -45,5 +51,10 @@ public class Tower : MonoBehaviour
         {
             _floors[n].SetPosition(n);
         }
+    }
+
+    void Update()
+    {
+        _fsm.Update(Time.deltaTime);
     }
 }
