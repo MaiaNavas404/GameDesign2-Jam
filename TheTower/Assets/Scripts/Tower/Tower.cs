@@ -51,6 +51,7 @@ public partial class Tower : MonoBehaviour
         {
             _floors[n].SetPosition(n);
         }
+        _fsm.OnFloorsChanged();
     }
 
     void Update()

@@ -21,7 +21,7 @@ public partial class Tower
             _timer -= deltaTime;
             if (_timer < 0)
             {
-                Context._floors[n].Trigger();
+                if (Context._floors.Count != 0)Context._floors[n].Trigger();
                 _timer = Context._triggerTime;
 
                 n++;
@@ -32,6 +32,13 @@ public partial class Tower
             }
 
             base.Update(deltaTime);
+        }
+
+        public override void OnFloorsChanged()
+        {
+            FSM.ChangeTo(FSM.CooldownState);
+
+            base.OnFloorsChanged();
         }
     }
 }

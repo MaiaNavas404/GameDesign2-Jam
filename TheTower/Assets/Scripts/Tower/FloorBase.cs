@@ -7,6 +7,7 @@ public class FloorBase : MonoBehaviour
     Tower _tower;
 
     [SerializeField]float _hoveredSizeMult;
+    [SerializeField]GameObject _hoverInfo;
     bool _isHoveredValue;
     bool _isHovered
     {
@@ -19,6 +20,8 @@ public class FloorBase : MonoBehaviour
 
             if (value) transform.localScale = _hoveredSizeMult * Vector3.one;
             else transform.localScale = Vector3.one;
+
+            _hoverInfo.SetActive(value);
         }
     }
 

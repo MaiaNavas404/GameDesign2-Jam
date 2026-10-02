@@ -17,5 +17,7 @@ public partial class Tower
         public virtual void OnExit() {}
 
         public virtual void Update(float deltaTime) {}
+
+        public virtual void OnFloorsChanged() {}
     }
 }

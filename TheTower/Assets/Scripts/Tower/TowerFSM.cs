@@ -18,5 +18,10 @@ public partial class Tower
 
             ChangeTo(CooldownState);
         }
+
+        public void OnFloorsChanged ()
+        {
+            (CurrentState as TowerStateBase).OnFloorsChanged();
+        }
     }
 }

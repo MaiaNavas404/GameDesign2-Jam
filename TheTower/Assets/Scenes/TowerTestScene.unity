@@ -163,9 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65efff3a52a7d64ba2947016f66b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  _cooldownTime: 1
+  _triggerTime: 0.2
   _maxFloors: 4
   _floorObject: {fileID: 2103092690407426817, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
-  _floorObject2: {fileID: 2103092690407426817, guid: 4762ed7fddc0eeb4c84e1505194410c7, type: 3}
+  _floorObject2: {fileID: 6915091462263900804, guid: 7c0a5b226c115c1459c38243b6fcc1fd, type: 3}
 --- !u!1 &1246143034
 GameObject:
   m_ObjectHideFlags: 0
