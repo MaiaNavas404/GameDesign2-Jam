@@ -33,6 +33,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log($"{health},{_state}");
         switch (_state)
         {
             case States.Move:
@@ -59,9 +60,9 @@ public class EnemyScript : MonoBehaviour
         spriteRenderer.color = Color.Lerp(Color.darkRed, Color.white, health / 100);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Tower"))
+        //if (other.("Tower"))
         {
             _state = States.Attack;
             animator.Play("attack");
