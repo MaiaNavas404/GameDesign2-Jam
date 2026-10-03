@@ -9,6 +9,7 @@ public class FloorCannon : FloorBase
         base.Trigger();
         _targetedEnemy = FindFirstEnemy();
         Attack();
+        ActivateSprite();
     }
 
     private GameObject FindFirstEnemy()

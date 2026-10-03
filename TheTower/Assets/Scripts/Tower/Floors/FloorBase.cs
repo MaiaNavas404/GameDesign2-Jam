@@ -7,7 +7,14 @@ public partial class FloorBase : MonoBehaviour
     Camera _cam;
     Tower _tower;
     FloorFSM _fsm;
-
+    
+    [SerializeField] private Sprite inactiveSprite;
+    [SerializeField] private Sprite activeSprite;
+    private SpriteRenderer _spriteRenderer;
+    private Sprite _currentSprite;
+    private float _timer = 0.3f;
+    private float _activeSpriteTime = 0.2f;
+        
     [SerializeField]float _hoveredSizeMult = 1.05f;
     [SerializeField]float _draggedSizeMult = 1.1f;
     [SerializeField]GameObject _hoverInfo;
@@ -32,6 +39,7 @@ public partial class FloorBase : MonoBehaviour
         _actions.Player.LeftClick.canceled += ctx => _fsm.StopLeftClick();
 
         _cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        _spriteRenderer =  gameObject.GetComponentInChildren(typeof(SpriteRenderer)) as SpriteRenderer;
     }
 
     void OnEnable()
@@ -45,7 +53,8 @@ public partial class FloorBase : MonoBehaviour
 
     void Update()
     {
-       
+        _timer += Time.deltaTime;
+        SetActiveSprite();
         Vector3 delta = _cam.ScreenToWorldPoint(_mousePos) - transform.position;
         _isHovered = Mathf.Abs(delta.x) < _graphicsTransf.localScale.x / 2 && Mathf.Abs(delta.y) < _graphicsTransf.localScale.y / 2 && !_isDragging;
 
@@ -74,5 +83,19 @@ public partial class FloorBase : MonoBehaviour
     {
         if (_fsm.CurrentState is not FloorStateDragging && _fsm.CurrentState is not FloorStateHoldDragging) 
             transform.localPosition = new(0, (n + 0.5f) * _graphicsTransf.lossyScale.y, 0);
+    }
+
+    private void SetActiveSprite()
+    {
+        _spriteRenderer.sprite = _currentSprite;
+        if (_timer <= _activeSpriteTime)
+            _currentSprite = activeSprite;
+        else
+            _currentSprite = inactiveSprite;
+    }
+
+    public void ActivateSprite()
+    {
+        _timer = 0;
     }
 }
