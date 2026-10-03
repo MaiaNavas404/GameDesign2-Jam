@@ -80,9 +80,14 @@ public partial class FloorBase : MonoBehaviour
             }
             else
             {
-                //GameOver();
+                GameOver();
             }
         }
+    }
+
+    public void GameOver ()
+    {
+        GameOverScreen.Instance.GameOver();
     }
     
     public virtual void Trigger ()
