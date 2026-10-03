@@ -14,7 +14,8 @@ public partial class FloorBase : MonoBehaviour
     private Sprite _currentSprite;
     private float _timer = 0.3f;
     private float _activeSpriteTime = 0.2f;
-        
+    public float health = 100f;
+    private float _maxHealth = 100f;
     [SerializeField]float _hoveredSizeMult = 1.05f;
     [SerializeField]float _draggedSizeMult = 1.1f;
     [SerializeField]GameObject _hoverInfo;
@@ -59,8 +60,19 @@ public partial class FloorBase : MonoBehaviour
         _isHovered = Mathf.Abs(delta.x) < _graphicsTransf.localScale.x / 2 && Mathf.Abs(delta.y) < _graphicsTransf.localScale.y / 2 && !_isDragging;
 
         _fsm.Update(Time.deltaTime);
+        if (health <= 0)
+        {
+            if (_tower.floorAmount > 1)
+            {
+               Sell();
+            }
+            else
+            {
+                //GameOver();
+            }
+        }
     }
-
+    
     public virtual void Trigger ()
     {
         ActivateSprite();
@@ -100,4 +112,10 @@ public partial class FloorBase : MonoBehaviour
     {
         _timer = 0;
     }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        _spriteRenderer.color = Color.Lerp(Color.darkRed, Color.white, health / 100);
+    }
+
 }

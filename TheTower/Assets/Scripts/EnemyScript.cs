@@ -19,10 +19,20 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
     [SerializeField] private float speed = 10;
-    [SerializeField] private float health = 100;
+    public float health = 100;
+    [SerializeField] private float damage = 2;
     [HideInInspector] public EnemySpawner mother;
+    [SerializeField] private Tower tower;
+    [HideInInspector] public int direction = -1; //default is moving towards the left
 
     // Update is called once per frame
+    void Start()
+    {
+        if (direction == 1)
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
     void Update()
     {
         switch (_state)
@@ -31,6 +41,7 @@ public class EnemyScript : MonoBehaviour
                 Move();
                 break;
             case States.Attack:
+                attack();
                 break;
         }
         if (health <= 0)
@@ -39,9 +50,14 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    private void attack()
+    {
+        tower.TakeDamage(damage);
+    }
+
     void Move()
     {
-        transform.Translate(-speed * Time.deltaTime ,0,0);
+        transform.Translate( direction * speed * Time.deltaTime ,0,0);
     }
 
     public void TakeDamage(float damage)
@@ -56,14 +72,12 @@ public class EnemyScript : MonoBehaviour
         {
             _state = States.Attack;
             animator.Play("attack");
+            tower =  other.gameObject.GetComponent<Tower>();
         }
-
     }
-
     private void Die()
     {
         mother.RemoveEnemyFromList(gameObject);
         Destroy(gameObject);
-        
     }
 }

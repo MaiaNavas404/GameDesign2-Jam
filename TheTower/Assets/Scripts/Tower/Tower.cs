@@ -79,10 +79,15 @@ public partial class Tower : MonoBehaviour
             OnFloorsChanged();
         }
     }
-
+    
     void Update()
     {
         _enemies = Spawner.enemies;
         _fsm.Update(Time.deltaTime);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        _floors[0].TakeDamage(damage);
     }
 }
