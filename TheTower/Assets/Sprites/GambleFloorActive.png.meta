@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4966ba3214c523f4cb6c225361c22cb2
+guid: fcd4af99b59644445a0e285f76365331
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7252552714894864676
-    second: HealthFloor_0
+      213: 347209943654180539
+    second: GambleFloorActive_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HealthFloor_0
+      name: GambleFloorActive_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cde85e14bb1c95b90800000000000000
-      internalID: -7252552714894864676
+      spriteID: bb6adf9aa9981d400800000000000000
+      internalID: 347209943654180539
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HealthFloor_0: -7252552714894864676
+      GambleFloorActive_0: 347209943654180539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
