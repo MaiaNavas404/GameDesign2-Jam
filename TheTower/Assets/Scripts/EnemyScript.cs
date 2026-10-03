@@ -18,13 +18,16 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
-    [SerializeField] private float speed = 10;
+    [SerializeField] private float speed = 1;
     public float health = 100;
     [SerializeField] private float damage = 2;
     [HideInInspector] public EnemySpawner mother;
     [SerializeField] private Tower tower;
     [HideInInspector] public int direction = -1; //default is moving towards the left
 
+    private float _timer;
+
+    private float _attackTime = 0.6f;
     // Update is called once per frame
     void Start()
     {
@@ -41,7 +44,12 @@ public class EnemyScript : MonoBehaviour
                 Move();
                 break;
             case States.Attack:
-                attack();
+                _timer += Time.deltaTime;
+                if (_timer >= _attackTime)
+                {
+                    attack();
+                    _timer = 0;
+                }
                 break;
         }
         if (health <= 0)
