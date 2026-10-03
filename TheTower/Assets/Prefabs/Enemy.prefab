@@ -164,10 +164,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   spriteRenderer: {fileID: 3347143635362920751}
   animator: {fileID: 1820664813071738767}
-  attackTrigger: {fileID: 0}
-  speed: 2
+  speed: 1
   health: 100
+  damage: 2
   mother: {fileID: 0}
+  tower: {fileID: 0}
+  direction: -1
 --- !u!70 &1601586755018575501
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

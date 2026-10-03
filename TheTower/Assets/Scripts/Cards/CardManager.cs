@@ -11,6 +11,7 @@ public class CardManager : MonoBehaviour
     [SerializeField]float _expGainSpeed = 20;
     [SerializeField]GameObject _fullTowerMessage;
     [SerializeField]GameObject _skipButton;
+    [SerializeField] private List<EnemySpawner> spawners;
     bool _showingCards;
 
     float _maxExp = 100;
@@ -47,6 +48,10 @@ public class CardManager : MonoBehaviour
 
     void ShowCards ()
     {
+        foreach (EnemySpawner spawner in spawners)
+        {
+            spawner.UpdateTimeBetweenSpawn();
+        }
         List<int> drawnCards = new();
         for (int i = 0; i < 3; i++)
         {
