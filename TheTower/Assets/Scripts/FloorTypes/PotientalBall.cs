@@ -12,6 +12,7 @@ public class PotientalBall : CannonBall
         {
             if (anObject.gameObject.CompareTag("Enemy"))
             {
+                Debug.Log(damage + (level * damagemultiplier));
                 anObject.GetComponent<EnemyScript>().TakeDamage(damage + (level * damagemultiplier));
             }
         }

@@ -56,6 +56,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2561990434237187019, guid: 80e67fdff76f1934ba037eca881d23b4, type: 3}
+    - target: {fileID: 7759043420545787082, guid: 7a0cf431368d324499c226dced21c996, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759043420545787082, guid: 7a0cf431368d324499c226dced21c996, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759043420545787082, guid: 7a0cf431368d324499c226dced21c996, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2776673922320864088, guid: 7a0cf431368d324499c226dced21c996, type: 3}
     m_RemovedGameObjects: []
@@ -88,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rigidBody: {fileID: 3900563391999865538}
-  explosionRadius: 2
+  explosionRadius: 1.5
   damage: 15
   mass: 1
   initialForce: 10

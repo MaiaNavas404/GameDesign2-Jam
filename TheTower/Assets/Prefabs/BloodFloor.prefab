@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8574625802097769258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1816558870072639935, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5064676051156698767, guid: 24d5072a8ebaedc4f9ff3d255fe61a2c, type: 3}
+    - target: {fileID: 2998596201138050489, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: activeSprite
+      value: 
+      objectReference: {fileID: -1256717369468560756, guid: 90f285dc94f8e3a479ae68d33a25d352, type: 3}
+    - target: {fileID: 2998596201138050489, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: inactiveSprite
+      value: 
+      objectReference: {fileID: 5064676051156698767, guid: 24d5072a8ebaedc4f9ff3d255fe61a2c, type: 3}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916874745638962115, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688730372592876546, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      propertyPath: m_Name
+      value: BloodFloor
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2998596201138050489, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4688730372592876546, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1908533575827132486}
+  m_SourcePrefab: {fileID: 100100000, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+--- !u!4 &1914216369638261832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7813632215331995490, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+  m_PrefabInstance: {fileID: 8574625802097769258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4030308052658030376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4688730372592876546, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+  m_PrefabInstance: {fileID: 8574625802097769258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1908533575827132486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030308052658030376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697b47c5a5a6caf4caba80cc85b28c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodFloor
+  _graphicsTransf: {fileID: 1914216369638261832}
+  inactiveSprite: {fileID: 5064676051156698767, guid: 24d5072a8ebaedc4f9ff3d255fe61a2c, type: 3}
+  activeSprite: {fileID: -1256717369468560756, guid: 90f285dc94f8e3a479ae68d33a25d352, type: 3}
+  _maxHealth: 100
+  _hoveredSizeMult: 1.05
+  _draggedSizeMult: 1.1
+  _hoverInfo: {fileID: 7160981825022090972}
+  targetedEnemy: {fileID: 0}
+  cannonBallPrefab: {fileID: 680232508376866369, guid: 2b90f2ce147099548b83ddef82e40c87, type: 3}
+--- !u!1 &7160981825022090972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1558205592644347382, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+  m_PrefabInstance: {fileID: 8574625802097769258}
+  m_PrefabAsset: {fileID: 0}

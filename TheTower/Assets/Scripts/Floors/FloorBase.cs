@@ -27,7 +27,7 @@ public partial class FloorBase : MonoBehaviour
         }
     }
 
-    [SerializeField]private float _maxHealth = 100f;
+    public float _maxHealth = 100f;
     [SerializeField]float _hoveredSizeMult = 1.05f;
     [SerializeField]float _draggedSizeMult = 1.1f;
     [SerializeField]GameObject _hoverInfo;
