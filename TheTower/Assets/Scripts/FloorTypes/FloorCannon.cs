@@ -20,6 +20,6 @@ public class FloorCannon : FloorBase
     private void Attack()
     {
         GameObject newBall;
-        newBall = Instantiate(cannonBallPrefab,transform.position,Quaternion.LookRotation(_targetedEnemy.transform.position - transform.position));
+        Instantiate(cannonBallPrefab,transform.position,Quaternion.LookRotation(_targetedEnemy.transform.position - transform.position));
     }
 }

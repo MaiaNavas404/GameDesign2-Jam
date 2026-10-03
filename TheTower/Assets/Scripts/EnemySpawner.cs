@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
         {
             _spawnYLevelVariation = Random.Range(-yLevelspawnVarition/2, yLevelspawnVarition/2);
             GameObject newEnemy = Instantiate(enemy, new Vector3(transform.position.x, transform.position.y + _spawnYLevelVariation, transform.position.z), Quaternion.identity,transform);
+            newEnemy.GetComponent<EnemyScript>().mother = this;
             enemies.Add(newEnemy);
             _timer = 0;
         }

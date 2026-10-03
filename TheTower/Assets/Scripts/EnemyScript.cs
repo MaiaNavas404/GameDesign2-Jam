@@ -18,10 +18,9 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
-    [SerializeField] private BoxCollider2D attackTrigger;
     [SerializeField] private float speed = 10;
     [SerializeField] private float health = 100;
-    public EnemySpawner mother;
+    [HideInInspector] public EnemySpawner mother;
 
     // Update is called once per frame
     void Update()
