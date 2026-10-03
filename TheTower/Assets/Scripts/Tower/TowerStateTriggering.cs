@@ -18,10 +18,13 @@ public partial class Tower
 
         public override void Update(float deltaTime)
         {
-            _timer -= deltaTime * (Context.BuffFloorAmount + 1);
+            _timer -= deltaTime;
             if (_timer < 0)
             {
-                if (Context._floors.Count != 0)Context._floors[n].Trigger();
+                if (Context._floors.Count != 0)
+                {
+                    Context._floors[n].Trigger();
+                }
                 _timer = Context._triggerTime;
 
                 n++;

@@ -15,7 +15,7 @@ public partial class Tower : MonoBehaviour
     List<FloorBase> _floors = new();
     [HideInInspector]public int floorAmount => _floors.Count;
 
-    [HideInInspector]public int BuffFloorAmount;
+    [HideInInspector]public bool _triggerMultiplier;
 
     TowerFSM _fsm;
 
