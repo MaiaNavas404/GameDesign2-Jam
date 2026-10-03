@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   spriteRenderer: {fileID: 3347143635362920751}
   animator: {fileID: 1820664813071738767}
-  speed: 1
+  speed: 1.5
   health: 100
   damage: 2
   mother: {fileID: 0}
