@@ -2642,10 +2642,6 @@ MonoBehaviour:
   - {fileID: 1452429834}
   - {fileID: 1954052906}
   Cards:
-  - Name: A
-    Sprite: {fileID: 21300000, guid: 067ecf1cfd7e3064eb1567d020ed4d6c, type: 3}
-    Object: {fileID: 6915091462263900804, guid: 7c0a5b226c115c1459c38243b6fcc1fd, type: 3}
-    Description: A
   - Name: Cannon
     Sprite: {fileID: 429394230995460217, guid: 330d730cf132016438beb29a494019c9, type: 3}
     Object: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
@@ -2657,7 +2653,7 @@ MonoBehaviour:
   - Name: Gamble floor
     Sprite: {fileID: 2113427687691599780, guid: 4a8a0e493e5235c4580b9fbc661f8257, type: 3}
     Object: {fileID: 8366236344358337788, guid: 83aefc35c37bed74aa9d999e1caf297c, type: 3}
-    Description: Shoots Them With Balls, 20% Chance Of Big Ball
+    Description: Shoots Them With Balls, 20% Chance Of Big Ball, 0.01% of deleting System32
   _expBar: {fileID: 1628115046}
   _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}

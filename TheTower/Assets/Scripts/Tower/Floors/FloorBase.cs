@@ -61,7 +61,10 @@ public partial class FloorBase : MonoBehaviour
         _fsm.Update(Time.deltaTime);
     }
 
-    public virtual void Trigger () {}
+    public virtual void Trigger ()
+    {
+        ActivateSprite();
+    }
 
     public void Initialize(Tower tower)
     {

@@ -11,7 +11,6 @@ public class FloorCannon : FloorBase
         {
             _targetedEnemy = FindFirstEnemy();
             Attack();
-            ActivateSprite();
         }
     }
 
