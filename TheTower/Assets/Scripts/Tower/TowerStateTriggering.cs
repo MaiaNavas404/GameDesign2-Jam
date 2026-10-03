@@ -35,7 +35,6 @@ public partial class Tower
 
                 if (_triggerTimes == 0)
                 {
-                    Debug.Log((int)Context.TriggerMultiplier);
                     _triggerTimes = (int)Context.TriggerMultiplier;
                     Context.TriggerMultiplier = 1;
 
