@@ -5,7 +5,7 @@ public partial class FloorBase : MonoBehaviour
 {
     [SerializeField]Transform _graphicsTransf;
     Camera _cam;
-    public Tower _tower;
+    Tower _tower;
     FloorFSM _fsm;
 
     [SerializeField]float _hoveredSizeMult = 1.05f;

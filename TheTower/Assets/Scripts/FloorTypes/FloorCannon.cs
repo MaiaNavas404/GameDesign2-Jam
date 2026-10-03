@@ -13,7 +13,7 @@ public class FloorCannon : FloorBase
 
     private GameObject FindFirstEnemy()
     {
-        return _tower._enemies[0];
+        return Tower.Instance._enemies[0];
     }
 
     private void Attack()
