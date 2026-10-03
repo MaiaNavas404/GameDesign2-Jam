@@ -38,7 +38,7 @@ public class EnemyScript : MonoBehaviour
     }
     void Update()
     {
-        print(health);
+        //print(health);
         switch (_state)
         {
             case States.Move:
