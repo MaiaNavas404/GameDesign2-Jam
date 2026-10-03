@@ -9,13 +9,14 @@ public class CannonBall : MonoBehaviour
     public float explosionRadius = 1.5f;
     public float damage = 30f;
     public float mass = 1f;
-    public Vector2 initialForce = new Vector2(10f,1f);
-    [SerializeField] private Vector2 forceDeviance = new Vector2(1f,1f);
+    public float initialForce = 10f;
+    [SerializeField] private float forceDeviance = 1f;
 
     void Start()
     {
-        Vector2 finalForce = initialForce + new Vector2(Random.Range(-forceDeviance.x/2,forceDeviance.x/2),Random.Range(-forceDeviance.y/2,forceDeviance.y/2)); 
-        rigidBody.AddForce(finalForce, ForceMode2D.Impulse);
+        //Vector2 finalForce = initialForce + new Vector2(Random.Range(-forceDeviance.x/2,forceDeviance.x/2),Random.Range(-forceDeviance.y/2,forceDeviance.y/2)); 
+        float finalForce = initialForce +  Random.Range(-forceDeviance/2,forceDeviance/2);
+        rigidBody.AddForce(finalForce * transform.right, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
