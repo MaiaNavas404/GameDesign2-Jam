@@ -56,6 +56,8 @@ public class SelectableCard : MonoBehaviour
         _floorName.text = CardManager.Instance.Cards[n].Name;
 
         _floorIndex = n;
+
+        gameObject.SetActive(true);
     }
     public void OnClicked ()
     {

@@ -1,11 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
     public static CardManager Instance;
     [SerializeField]SelectableCard[] _selectableCards;
     public Card[] Cards;
+    [SerializeField]Slider _expBar;
+    bool _showingCards;
+
+    float _maxExp = 100;
+    float _expValue = -1;
+    public float Exp
+    {
+        get { return _expValue; }
+        set
+        {
+            if (value == _expValue) return;
+            _expValue = value;
+
+            if (_expValue >= _maxExp)
+            {
+                _expValue -= _maxExp;
+                ShowCards();
+            }
+
+            _expBar.value = _expValue / _maxExp;
+        }
+    }
 
 
     void Awake()
@@ -15,6 +38,12 @@ public class CardManager : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
+    {
+        Exp = 0;
+        ShowCards();
+    }
+
+    void ShowCards ()
     {
         List<int> drawnCards = new();
         for (int i = 0; i < 3; i++)
@@ -28,6 +57,8 @@ public class CardManager : MonoBehaviour
             _selectableCards[i].SetCard(n);
             drawnCards.Add(n);
         }
+
+        _showingCards = true;
     }
 
     public void OnCardSelected()
@@ -36,5 +67,15 @@ public class CardManager : MonoBehaviour
         {
             sc.gameObject.SetActive(false);
         }
+        _showingCards = false;
+    }
+
+    void Update()
+    {
+        if (!_showingCards)
+        {
+            Exp += 50 * Time.deltaTime;       
+        }
+
     }
 }
