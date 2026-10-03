@@ -6,12 +6,14 @@ public class SelectableCard : MonoBehaviour
 {
     [SerializeField]TMP_Text _floorName;
     [SerializeField]Image _floorImage;
+    [SerializeField]TMP_Text _descriptionText;
     int _floorIndex;
 
     public void SetCard (int n)
     {
         _floorImage.sprite = CardManager.Instance.Cards[n].Sprite;
         _floorName.text = CardManager.Instance.Cards[n].Name;
+        _descriptionText.text = CardManager.Instance.Cards[n].Description;
 
         _floorIndex = n;
 
