@@ -73,19 +73,23 @@ public partial class FloorBase : MonoBehaviour
         _isHovered = Mathf.Abs(delta.x) < _graphicsTransf.localScale.x / 2 && Mathf.Abs(delta.y) < _graphicsTransf.localScale.y / 2 && !_isDragging;
 
         _fsm.Update(Time.deltaTime);
-        if (_health <= 0)
-        {
-            if (_tower.floorAmount > 1)
-            {
-               Sell();
-            }
-            else
-            {
-                GameOver();
-            }
-        }
+        checkHealth();
     }
 
+    public virtual void checkHealth()
+    {
+        if (_health <= 0)
+    {
+        if (_tower.floorAmount > 1)
+        {
+            Sell();
+        }
+        else
+        {
+            GameOver();
+        }
+    }
+    }
     public void GameOver ()
     {
         GameOverScreen.Instance.GameOver();
@@ -101,7 +105,7 @@ public partial class FloorBase : MonoBehaviour
         _tower = tower;
     }
 
-    void Sell ()
+    public void Sell ()
     {
         if (_tower.floorAmount > 1)
         {

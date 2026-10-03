@@ -24,7 +24,7 @@ public class EnemyScript : MonoBehaviour
     [HideInInspector] public EnemySpawner mother;
     [SerializeField] private Tower tower;
     [HideInInspector] public int direction = -1; //default is moving towards the left
-
+    public bool hasBeenBombed = false;
     private float _timer;
 
     private float _attackTime = 0.6f;

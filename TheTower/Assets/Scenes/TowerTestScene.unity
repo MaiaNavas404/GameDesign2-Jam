@@ -969,7 +969,7 @@ MonoBehaviour:
   _cooldownTime: 1
   _triggerTime: 0.2
   _maxFloors: 5
-  _floorObject: {fileID: 3107991109187934203, guid: 897b89c2e9ec59f4790790b0308789d6, type: 3}
+  _floorObject: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
   TriggerMultiplier: 1
 --- !u!61 &683772397
 BoxCollider2D:
@@ -2995,6 +2995,10 @@ MonoBehaviour:
     Sprite: {fileID: 7661818260671201885, guid: 4abd55065546c404d9e84345e8168d81, type: 3}
     Object: {fileID: 3107991109187934203, guid: 897b89c2e9ec59f4790790b0308789d6, type: 3}
     Description: Zaps enemies near the tower
+  - Name: Green Floor
+    Sprite: {fileID: 5650891958549537603, guid: 8ac19e5b32a174e40a6e1ba42894a13d, type: 3}
+    Object: {fileID: 8361109967562730047, guid: 8583ceca1356e6a4282bbd0a3795e8fa, type: 3}
+    Description: Doesnt Do anything until it gets destroyed
   _expBar: {fileID: 1628115046}
   _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}
