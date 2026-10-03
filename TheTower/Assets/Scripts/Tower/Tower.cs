@@ -4,11 +4,11 @@ using UnityEngine;
 
 public partial class Tower : MonoBehaviour
 {
+    public static Tower Instance;
     [SerializeField]float _cooldownTime;
     [SerializeField]float _triggerTime;
     [SerializeField]int _maxFloors = 4;
     [SerializeField]GameObject _floorObject;
-    [SerializeField]GameObject _floorObject2;
     List<FloorBase> _floors = new();
     [HideInInspector]public int floorAmount => _floors.Count;
 
@@ -19,10 +19,9 @@ public partial class Tower : MonoBehaviour
     {
         _fsm = new(this);
 
+        Instance = this;
+
         AddFloor(_floorObject);
-        AddFloor(_floorObject2);
-        AddFloor(_floorObject);
-        AddFloor(_floorObject2);
     }
 
     public void AddFloor (GameObject floor)
