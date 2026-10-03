@@ -8,12 +8,17 @@ public class FloorCannon : FloorBase
     {
         base.Trigger();
         _targetedEnemy = FindFirstEnemy();
-        //Instantiate(cannonBallPrefab,transform.position,Quaternion.LookRotation());
-
+        Attack();
     }
 
     private GameObject FindFirstEnemy()
     {
-        return gameObject;
+        return _tower._enemies[0];
+    }
+
+    private void Attack()
+    {
+        GameObject newBall;
+        newBall = Instantiate(cannonBallPrefab,transform.position,Quaternion.LookRotation(_targetedEnemy.transform.position - transform.position));
     }
 }

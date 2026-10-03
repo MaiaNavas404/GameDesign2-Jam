@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public partial class FloorBase : MonoBehaviour
 {
     [SerializeField]Transform _graphicsTransf;
     Camera _cam;
-    Tower _tower;
+    public Tower _tower;
     FloorFSM _fsm;
 
     [SerializeField]float _hoveredSizeMult = 1.05f;
@@ -12,7 +13,9 @@ public partial class FloorBase : MonoBehaviour
     [SerializeField]GameObject _hoverInfo;
     bool _isHovered;
     static bool _isDragging;
-
+    
+    
+    
     InputSystem_Actions _actions;
     Vector2 _mousePos;
 
@@ -42,6 +45,7 @@ public partial class FloorBase : MonoBehaviour
 
     void Update()
     {
+       
         Vector3 delta = _cam.ScreenToWorldPoint(_mousePos) - transform.position;
         _isHovered = Mathf.Abs(delta.x) < _graphicsTransf.localScale.x / 2 && Mathf.Abs(delta.y) < _graphicsTransf.localScale.y / 2 && !_isDragging;
 

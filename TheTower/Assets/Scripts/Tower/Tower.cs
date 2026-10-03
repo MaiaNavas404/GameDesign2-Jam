@@ -4,6 +4,8 @@ using UnityEngine;
 
 public partial class Tower : MonoBehaviour
 {
+    [HideInInspector] public List<GameObject> _enemies;
+    public EnemySpawner Spawner;
     public static Tower Instance;
     [SerializeField]float _cooldownTime;
     [SerializeField]float _triggerTime;
@@ -77,6 +79,7 @@ public partial class Tower : MonoBehaviour
 
     void Update()
     {
+        _enemies = Spawner.enemies;
         _fsm.Update(Time.deltaTime);
     }
 }
