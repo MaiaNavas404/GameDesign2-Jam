@@ -28,7 +28,7 @@ public class CannonBall : MonoBehaviour
         }
     }
 
-    private void DealDamage()
+    public virtual void DealDamage()
     {        
         Collider2D[] objecctsHit;
         objecctsHit = Physics2D.OverlapCircleAll(transform.position, explosionRadius);

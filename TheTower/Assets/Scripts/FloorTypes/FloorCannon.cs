@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FloorCannon : FloorBase
 {
-    private GameObject _targetedEnemy;
+    [HideInInspector] public GameObject targetedEnemy;
     [SerializeField] private GameObject cannonBallPrefab;
     public override void Trigger()
     {
         base.Trigger();
         if (EnemySpawner.enemies.Count != 0)
         {
-            _targetedEnemy = FindFirstEnemy();
+            targetedEnemy = FindFirstEnemy();
             Attack();
         }
     }
@@ -24,11 +25,11 @@ public class FloorCannon : FloorBase
         ShootCannonBall(cannonBallPrefab);
     }
 
-    public void ShootCannonBall (GameObject cannonBall)
+    public virtual void ShootCannonBall (GameObject cannonBall)
     {
         GameObject newBall = Instantiate(cannonBall,transform.position,Quaternion.identity);
         newBall.transform.rotation =
-            LookAt(new Vector2(_targetedEnemy.transform.position.x, _targetedEnemy.transform.position.y));        
+            LookAt(new Vector2(targetedEnemy.transform.position.x, targetedEnemy.transform.position.y));        
     }
 
     protected Quaternion LookAt(Vector2 point){

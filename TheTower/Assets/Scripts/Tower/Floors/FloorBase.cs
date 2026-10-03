@@ -120,9 +120,16 @@ public partial class FloorBase : MonoBehaviour
     {
         _spriteRenderer.sprite = _currentSprite;
         if (_timer <= _activeSpriteTime)
+        {
             _currentSprite = activeSprite;
+            _spriteRenderer.transform.localScale = new Vector3(2.5f,2.5f, 2.5f);
+        }
         else
+        {
             _currentSprite = inactiveSprite;
+            _spriteRenderer.transform.localScale = new Vector3(2, 2, 2);
+        }
+            
     }
 
     public void ActivateSprite()
