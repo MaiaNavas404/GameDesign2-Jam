@@ -4,7 +4,7 @@ public class PotientalBall : CannonBall
 {
     public float damagemultiplier = 0.1f;
     public int level = 0;
-    public virtual void DealDamage()
+    public override void DealDamage()
     {        
         Collider2D[] objecctsHit;
         objecctsHit = Physics2D.OverlapCircleAll(transform.position, explosionRadius);

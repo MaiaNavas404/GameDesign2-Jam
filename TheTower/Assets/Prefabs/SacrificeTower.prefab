@@ -68,7 +68,8 @@ PrefabInstance:
       propertyPath: cannonBallPrefab
       value: 
       objectReference: {fileID: 309769169393566675, guid: d74cde9b261c1de4eb9818fe33dc1456, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9173834025112386918, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -93,3 +94,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7313c303f029b418f72d3320d1acf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  _graphicsTransf: {fileID: 2437363254620654983}
+  inactiveSprite: {fileID: 6460019683038664264, guid: ebd6b3108b03e4e4b8bf17f2ddcdf007, type: 3}
+  activeSprite: {fileID: -2550925126408538158, guid: bfbaa8680b843da4b8d6410962e99769, type: 3}
+  _maxHealth: 100
+  _hoveredSizeMult: 1.05
+  _draggedSizeMult: 1.1
+  _hoverInfo: {fileID: 6350922465912264467}
+  targetedEnemy: {fileID: 0}
+  cannonBallPrefab: {fileID: 309769169393566675, guid: d74cde9b261c1de4eb9818fe33dc1456, type: 3}
+  towerDamage: 10
+--- !u!4 &2437363254620654983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7073682447200922565, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
+  m_PrefabInstance: {fileID: 4898091490004346434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6350922465912264467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2007064020572254545, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
+  m_PrefabInstance: {fileID: 4898091490004346434}
+  m_PrefabAsset: {fileID: 0}

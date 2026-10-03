@@ -15,7 +15,7 @@ public class FloorCannon : FloorBase
         }
     }
 
-    private GameObject FindFirstEnemy()
+    public GameObject FindFirstEnemy()
     {
         return Tower.Instance._enemies[0];
     }

@@ -66,6 +66,7 @@ public partial class FloorBase : MonoBehaviour
 
     void Update()
     {
+
         _timer += Time.deltaTime;
         SetActiveSprite();
         Vector3 delta = _cam.ScreenToWorldPoint(_mousePos) - transform.position;
@@ -122,12 +123,12 @@ public partial class FloorBase : MonoBehaviour
         if (_timer <= _activeSpriteTime)
         {
             _currentSprite = activeSprite;
-            _spriteRenderer.transform.localScale = new Vector3(2.5f,2.5f, 2.5f);
+            //_spriteRenderer.transform.localScale = new Vector3(2.5f,2.5f, 2.5f);
         }
         else
         {
             _currentSprite = inactiveSprite;
-            _spriteRenderer.transform.localScale = new Vector3(2, 2, 2);
+            //_spriteRenderer.transform.localScale = new Vector3(2, 2, 2);
         }
             
     }
@@ -140,6 +141,23 @@ public partial class FloorBase : MonoBehaviour
     {
         _health -= damage;
         _spriteRenderer.color = Color.Lerp(Color.darkRed, Color.white, _health / 100);
+    }
+    public int FindTowerPosition()
+    {
+        for (int i = 0; i <  _tower.floorAmount; i++ )
+        {
+            if (_tower.GetFloors()[i] == this)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public void DamageAFloor(int index, float damage)
+    {
+        _tower.GetFloors()[index].TakeDamage(damage);
     }
 
 }

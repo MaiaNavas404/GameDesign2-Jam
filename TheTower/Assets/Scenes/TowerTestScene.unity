@@ -2834,22 +2834,30 @@ MonoBehaviour:
   - {fileID: 1452429834}
   - {fileID: 1954052906}
   Cards:
-  - Name: Cannon Floor
+  - Name: CanonFloor
     Sprite: {fileID: 429394230995460217, guid: 330d730cf132016438beb29a494019c9, type: 3}
     Object: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
-    Description: Shoots Them With Balls
-  - Name: Buff Floor
+    Description: 'Shoots bombs '
+  - Name: Buffing Floor
     Sprite: {fileID: 3231934834647757800, guid: 01cb25597cc277d48bc7dd3fde3ff4c9, type: 3}
     Object: {fileID: 3582157634499775900, guid: 625eefb89cf7c764a9d6530ae42fbe29, type: 3}
-    Description: Makes The Floor Above It Trigger Twice
-  - Name: Gamble Floor
+    Description: Allows the floor above to attack twice!
+  - Name: Casino Floor
     Sprite: {fileID: 2113427687691599780, guid: 4a8a0e493e5235c4580b9fbc661f8257, type: 3}
     Object: {fileID: 8366236344358337788, guid: 83aefc35c37bed74aa9d999e1caf297c, type: 3}
-    Description: Shoots Them With Balls, 20% Chance Of Big Ball
+    Description: Shoots small balls with a chance for big bombs
   - Name: Health Floor
     Sprite: {fileID: -7252552714894864676, guid: 4966ba3214c523f4cb6c225361c22cb2, type: 3}
     Object: {fileID: 2438088163019009296, guid: 2f28dc057dafab44db7fb78362489104, type: 3}
     Description: Heals The Floor Above It
+  - Name: PotentialTower
+    Sprite: {fileID: 4838207192561094107, guid: 1e20f6c697437744cb05b1bc5a5c4a4b, type: 3}
+    Object: {fileID: 4688730372592876546, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
+    Description: Shoots magic projectiles, gets stronger over time
+  - Name: SacrificalTower
+    Sprite: {fileID: 6460019683038664264, guid: ebd6b3108b03e4e4b8bf17f2ddcdf007, type: 3}
+    Object: {fileID: 913507795692932839, guid: 717e35f6a8899a944bd4f680223e93ab, type: 3}
+    Description: Shoots Strong Projectiles, but damages the tower below it
   _expBar: {fileID: 1628115046}
   _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}
