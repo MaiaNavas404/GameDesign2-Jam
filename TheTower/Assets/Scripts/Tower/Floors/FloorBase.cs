@@ -26,7 +26,7 @@ public partial class FloorBase : MonoBehaviour
     InputSystem_Actions _actions;
     Vector2 _mousePos;
 
-    void Awake()
+    public virtual void Awake()
     {
         _fsm = new(this);
 
@@ -61,10 +61,7 @@ public partial class FloorBase : MonoBehaviour
         _fsm.Update(Time.deltaTime);
     }
 
-    public virtual void Trigger ()
-    {
-        //Debug.Log(gameObject.name + "  " + Time.time);
-    }
+    public virtual void Trigger () {}
 
     public void Initialize(Tower tower)
     {
@@ -78,6 +75,8 @@ public partial class FloorBase : MonoBehaviour
             _tower.RemoveFloor(gameObject);
         }
     }
+
+    public virtual void OnDestroy() {}
 
     public void SetPosition (int n)
     {
