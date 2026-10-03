@@ -43,6 +43,11 @@ public partial class Tower : MonoBehaviour
         return false;
     }
 
+    public List<FloorBase> GetFloors ()
+    {
+        return _floors;
+    }
+
     public void RemoveFloor (GameObject floor)
     {
         FloorBase floorScript = floor.GetComponent<FloorBase>();
