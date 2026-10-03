@@ -840,7 +840,7 @@ MonoBehaviour:
   _cooldownTime: 1
   _triggerTime: 0.2
   _maxFloors: 5
-  _floorObject: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
+  _floorObject: {fileID: 3107991109187934203, guid: 897b89c2e9ec59f4790790b0308789d6, type: 3}
   TriggerMultiplier: 1
 --- !u!61 &683772397
 BoxCollider2D:
@@ -2834,7 +2834,7 @@ MonoBehaviour:
   - {fileID: 1452429834}
   - {fileID: 1954052906}
   Cards:
-  - Name: CanonFloor
+  - Name: Canon Floor
     Sprite: {fileID: 429394230995460217, guid: 330d730cf132016438beb29a494019c9, type: 3}
     Object: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
     Description: 'Shoots bombs '
@@ -2850,18 +2850,22 @@ MonoBehaviour:
     Sprite: {fileID: -7252552714894864676, guid: 4966ba3214c523f4cb6c225361c22cb2, type: 3}
     Object: {fileID: 2438088163019009296, guid: 2f28dc057dafab44db7fb78362489104, type: 3}
     Description: Heals The Floor Above It
-  - Name: PotentialTower
+  - Name: Magical Floor
     Sprite: {fileID: 4838207192561094107, guid: 1e20f6c697437744cb05b1bc5a5c4a4b, type: 3}
     Object: {fileID: 4688730372592876546, guid: 7fdfc743d755e484492c52c7652f01b8, type: 3}
     Description: Shoots magic projectiles, gets stronger over time
-  - Name: SacrificalTower
+  - Name: Sacrifical Floor
     Sprite: {fileID: 6460019683038664264, guid: ebd6b3108b03e4e4b8bf17f2ddcdf007, type: 3}
     Object: {fileID: 913507795692932839, guid: 717e35f6a8899a944bd4f680223e93ab, type: 3}
     Description: Shoots Strong Projectiles, but damages the tower below it
-  - Name: RevengeFloor
+  - Name: Revenge Floor
     Sprite: {fileID: 5064676051156698767, guid: 24d5072a8ebaedc4f9ff3d255fe61a2c, type: 3}
     Object: {fileID: 4030308052658030376, guid: 139385b08a3e46a48893ed0fd8890d1b, type: 3}
     Description: Shoots Projectiles that get stronger the less health it has
+  - Name: Zap Floor
+    Sprite: {fileID: 7661818260671201885, guid: 4abd55065546c404d9e84345e8168d81, type: 3}
+    Object: {fileID: 3107991109187934203, guid: 897b89c2e9ec59f4790790b0308789d6, type: 3}
+    Description: Zaps enemies near the tower
   _expBar: {fileID: 1628115046}
   _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}
