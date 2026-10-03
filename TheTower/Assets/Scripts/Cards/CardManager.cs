@@ -8,6 +8,8 @@ public class CardManager : MonoBehaviour
     [SerializeField]SelectableCard[] _selectableCards;
     public Card[] Cards;
     [SerializeField]Slider _expBar;
+    [SerializeField]GameObject _fullTowerMessage;
+    [SerializeField]GameObject _skipButton;
     bool _showingCards;
 
     float _maxExp = 100;
@@ -40,7 +42,6 @@ public class CardManager : MonoBehaviour
     void Start()
     {
         Exp = 0;
-        ShowCards();
     }
 
     void ShowCards ()
@@ -59,6 +60,7 @@ public class CardManager : MonoBehaviour
         }
 
         _showingCards = true;
+        _skipButton.SetActive(true);
     }
 
     public void OnCardSelected()
@@ -68,6 +70,13 @@ public class CardManager : MonoBehaviour
             sc.gameObject.SetActive(false);
         }
         _showingCards = false;
+        _fullTowerMessage.SetActive(false);
+        _skipButton.SetActive(false);
+    }
+
+    public void OnSelectionRejected ()
+    {
+        _fullTowerMessage.SetActive(true);
     }
 
     void Update()

@@ -7,8 +7,8 @@ public partial class FloorBase : MonoBehaviour
     Tower _tower;
     FloorFSM _fsm;
 
-    [SerializeField]float _hoveredSizeMult;
-    [SerializeField]float _draggedSizeMult;
+    [SerializeField]float _hoveredSizeMult = 1.05f;
+    [SerializeField]float _draggedSizeMult = 1.1f;
     [SerializeField]GameObject _hoverInfo;
     bool _isHovered;
     static bool _isDragging;

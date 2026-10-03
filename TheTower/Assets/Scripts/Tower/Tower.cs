@@ -24,7 +24,7 @@ public partial class Tower : MonoBehaviour
         AddFloor(_floorObject);
     }
 
-    public void AddFloor (GameObject floor)
+    public bool AddFloor (GameObject floor)
     {
         if (_floors.Count < _maxFloors)
         {
@@ -32,7 +32,10 @@ public partial class Tower : MonoBehaviour
             _floors.Add(floorScript);
             floorScript.Initialize(this);
             OnFloorsChanged();
+
+            return true;
         }
+        return false;
     }
 
     public void RemoveFloor (GameObject floor)
