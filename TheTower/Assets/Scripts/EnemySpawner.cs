@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
         newEnemyScript.health = enemyHealth;
         enemies.Add(newEnemy);
         _timer = 0;
-        print($"{enemyHealth}.{timeBetweenSpawns}");
+        //print($"{enemyHealth}.{timeBetweenSpawns}");
     }
 
     public void UpdateTimeBetweenSpawn()

@@ -27,8 +27,9 @@ public class HoverableObject : MonoBehaviour
 
     void Update()
     {
-        Vector2 localMousePos = _mousePos - new Vector2(Screen.width / 2, Screen.height / 2);
-        Vector2 delta = new Vector2(_transform.localPosition.x, _transform.localPosition.y) - localMousePos;
+        Vector2 delta = new Vector2(_transform.position.x, _transform.position.y) - _mousePos;
+
+        //if (gameObject.name == "Card") Debug.Log(delta - otherDelta);
 
         bool hovered = Mathf.Abs(delta.x) < _transform.rect.width / 2 && Mathf.Abs(delta.y) < _transform.rect.height / 2;
         if (hovered)
