@@ -747,7 +747,7 @@ MonoBehaviour:
   _cooldownTime: 1
   _triggerTime: 0.2
   _maxFloors: 4
-  _floorObject: {fileID: 2103092690407426817, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+  _floorObject: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
   BuffFloorAmount: 0
 --- !u!61 &683772397
 BoxCollider2D:
@@ -2645,20 +2645,21 @@ MonoBehaviour:
   - Name: A
     Sprite: {fileID: 21300000, guid: 067ecf1cfd7e3064eb1567d020ed4d6c, type: 3}
     Object: {fileID: 6915091462263900804, guid: 7c0a5b226c115c1459c38243b6fcc1fd, type: 3}
-    Description: This is the A card
-  - Name: B
-    Sprite: {fileID: 21300000, guid: 0bd7e396b253a9c419941181bb9f2da1, type: 3}
-    Object: {fileID: 5597841835582754820, guid: 3c601b701d0dfee449442cd7c5250dc5, type: 3}
-    Description: This is the B card
+    Description: A
   - Name: Cannon
     Sprite: {fileID: 429394230995460217, guid: 330d730cf132016438beb29a494019c9, type: 3}
     Object: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
-    Description: Shoots Them WIth Balls
+    Description: Shoots Them With Balls
   - Name: Buff floor
     Sprite: {fileID: 3231934834647757800, guid: 01cb25597cc277d48bc7dd3fde3ff4c9, type: 3}
     Object: {fileID: 3582157634499775900, guid: 625eefb89cf7c764a9d6530ae42fbe29, type: 3}
-    Description: Makes the cooldown between tower triggers shorter
+    Description: Makes The Cooldown Between Tower Triggers Shorter
+  - Name: Gamble floor
+    Sprite: {fileID: 2113427687691599780, guid: 4a8a0e493e5235c4580b9fbc661f8257, type: 3}
+    Object: {fileID: 8366236344358337788, guid: 83aefc35c37bed74aa9d999e1caf297c, type: 3}
+    Description: Shoots Them With Balls, 20% Chance Of Big Ball
   _expBar: {fileID: 1628115046}
+  _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}
   _skipButton: {fileID: 180531814}
 --- !u!1 &1845510334

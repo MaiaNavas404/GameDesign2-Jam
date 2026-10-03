@@ -8,6 +8,7 @@ public class CardManager : MonoBehaviour
     [SerializeField]SelectableCard[] _selectableCards;
     public Card[] Cards;
     [SerializeField]Slider _expBar;
+    [SerializeField]float _expGainSpeed = 20;
     [SerializeField]GameObject _fullTowerMessage;
     [SerializeField]GameObject _skipButton;
     bool _showingCards;
@@ -83,7 +84,7 @@ public class CardManager : MonoBehaviour
     {
         if (!_showingCards)
         {
-            Exp += 50 * Time.deltaTime;       
+            Exp += _expGainSpeed * Time.deltaTime;       
         }
 
     }

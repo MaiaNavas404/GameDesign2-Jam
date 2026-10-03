@@ -84,7 +84,5 @@ public partial class Tower : MonoBehaviour
     {
         _enemies = Spawner.enemies;
         _fsm.Update(Time.deltaTime);
-
-        Debug.Log(BuffFloorAmount);
     }
 }

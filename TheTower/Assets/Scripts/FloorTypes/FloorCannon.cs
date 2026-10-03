@@ -7,9 +7,12 @@ public class FloorCannon : FloorBase
     public override void Trigger()
     {
         base.Trigger();
-        _targetedEnemy = FindFirstEnemy();
-        Attack();
-        ActivateSprite();
+        if (Tower.Instance._enemies.Count != 0)
+        {
+            _targetedEnemy = FindFirstEnemy();
+            Attack();
+            ActivateSprite();
+        }
     }
 
     private GameObject FindFirstEnemy()
@@ -17,12 +20,18 @@ public class FloorCannon : FloorBase
         return Tower.Instance._enemies[0];
     }
 
-    private void Attack()
+    public virtual void Attack()
     {
-        GameObject newBall = Instantiate(cannonBallPrefab,transform.position,Quaternion.identity);
-        newBall.transform.rotation =
-            LookAt(new Vector2(_targetedEnemy.transform.position.x, _targetedEnemy.transform.position.y));
+        ShootCannonBall(cannonBallPrefab);
     }
+
+    public void ShootCannonBall (GameObject cannonBall)
+    {
+        GameObject newBall = Instantiate(cannonBall,transform.position,Quaternion.identity);
+        newBall.transform.rotation =
+            LookAt(new Vector2(_targetedEnemy.transform.position.x, _targetedEnemy.transform.position.y));        
+    }
+
     protected Quaternion LookAt(Vector2 point){
 
         float angle = AngleBetweenPoints(transform.position, point); 
