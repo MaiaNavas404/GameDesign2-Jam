@@ -60,11 +60,15 @@ public partial class FloorBase : MonoBehaviour
 
     void Sell ()
     {
-        _tower.RemoveFloor(gameObject);
+        if (_tower.floorAmount > 1)
+        {
+            _tower.RemoveFloor(gameObject);
+        }
     }
 
     public void SetPosition (int n)
     {
-        transform.localPosition = new(0, (n + 0.5f) * _graphicsTransf.lossyScale.y, 0);
+        if (_fsm.CurrentState is not FloorStateDragging && _fsm.CurrentState is not FloorStateHoldDragging) 
+            transform.localPosition = new(0, (n + 0.5f) * _graphicsTransf.lossyScale.y, 0);
     }
 }

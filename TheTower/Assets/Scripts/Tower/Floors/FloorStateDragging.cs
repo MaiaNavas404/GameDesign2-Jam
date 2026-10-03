@@ -20,6 +20,8 @@ public partial class FloorBase
 
             Context.transform.position = pos;
 
+            Context._tower.SortTower();
+
             base.Update(deltaTime);
         }
 
