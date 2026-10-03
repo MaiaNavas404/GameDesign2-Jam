@@ -8,17 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2655614587856562539, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+      propertyPath: activeSprite
+      value: 
+      objectReference: {fileID: 68870505326839212, guid: edbbd42c089b4e846a49da0c4695b6af, type: 3}
+    - target: {fileID: -2655614587856562539, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+      propertyPath: inactiveSprite
+      value: 
+      objectReference: {fileID: 3231934834647757800, guid: 01cb25597cc277d48bc7dd3fde3ff4c9, type: 3}
     - target: {fileID: 2103092690407426817, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_Name
       value: BuffFloor
       objectReference: {fileID: 0}
     - target: {fileID: 2827238791087728194, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2827238791087728194, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4975261994938332860, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_Sprite

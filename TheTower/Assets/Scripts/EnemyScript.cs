@@ -34,7 +34,6 @@ public class EnemyScript : MonoBehaviour
             case States.Attack:
                 break;
         }
-        Move();
         if (health <= 0)
         {
             Die();
@@ -51,10 +50,10 @@ public class EnemyScript : MonoBehaviour
         health -= damage;
         spriteRenderer.color = Color.Lerp(Color.darkRed, Color.white, health / 100);
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.collider.CompareTag("Tower"))
+        if (other.gameObject.CompareTag("Tower"))
         {
             _state = States.Attack;
             animator.Play("attack");

@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
         if (_timer >= timeBetweenSpawns)
         {
             _spawnYLevelVariation = Random.Range(-yLevelspawnVarition/2, yLevelspawnVarition/2);
-            GameObject newEnemy = Instantiate(enemy, new Vector3(transform.position.x, transform.position.y + _spawnYLevelVariation, transform.position.z), Quaternion.identity);
+            GameObject newEnemy = Instantiate(enemy, new Vector3(transform.position.x, transform.position.y + _spawnYLevelVariation, transform.position.z), Quaternion.identity,transform);
             enemies.Add(newEnemy);
             _timer = 0;
         }

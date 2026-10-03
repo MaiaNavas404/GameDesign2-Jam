@@ -12,10 +12,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerFloor Canon
       objectReference: {fileID: 0}
+    - target: {fileID: 2827238791087728194, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827238791087728194, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4975261994938332860, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6460019683038664264, guid: ebd6b3108b03e4e4b8bf17f2ddcdf007, type: 3}
+      objectReference: {fileID: 429394230995460217, guid: 330d730cf132016438beb29a494019c9, type: 3}
     - target: {fileID: 7666692349649319104, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -88,9 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloorCannon
   _graphicsTransf: {fileID: 7073682447200922565}
-  inactiveSprite: {fileID: 6460019683038664264, guid: ebd6b3108b03e4e4b8bf17f2ddcdf007, type: 3}
-  activeSprite: {fileID: -2550925126408538158, guid: bfbaa8680b843da4b8d6410962e99769, type: 3}
-  spriteRenderer: {fileID: 0}
+  inactiveSprite: {fileID: 429394230995460217, guid: 330d730cf132016438beb29a494019c9, type: 3}
+  activeSprite: {fileID: 4774724481721776918, guid: c8104bf0ee5ab424587da76ebf712692, type: 3}
   _hoveredSizeMult: 1.05
   _draggedSizeMult: 1.1
   _hoverInfo: {fileID: 2007064020572254545}

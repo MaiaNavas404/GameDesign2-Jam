@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2655614587856562539, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+      propertyPath: activeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0bd7e396b253a9c419941181bb9f2da1, type: 3}
+    - target: {fileID: -2655614587856562539, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
+      propertyPath: inactiveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0bd7e396b253a9c419941181bb9f2da1, type: 3}
     - target: {fileID: 2103092690407426817, guid: 3eff568327fb1fd469e4a07f2e9fb97f, type: 3}
       propertyPath: m_Name
       value: TowerFloorB
