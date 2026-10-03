@@ -1110,8 +1110,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: lowerTimePerLevel
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: enemyHealthPerLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: yLevelspawnVarition
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: baseTimeBetweenSpawns
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3687869638651247099, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: timeBetweenSpawns
@@ -1164,6 +1176,10 @@ PrefabInstance:
     - target: {fileID: 7799417569387853258, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799417569387853258, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2838,7 +2854,9 @@ MonoBehaviour:
   _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}
   _skipButton: {fileID: 180531814}
-  spawners: []
+  spawners:
+  - {fileID: 2037004559}
+  - {fileID: 1855847203}
 --- !u!1 &1845510334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +2936,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855847203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+  m_PrefabInstance: {fileID: 2102842257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b9be6c689e89142b5760ba488366f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!1 &1954052902
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,8 +3426,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: enemyBaseHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: lowerTimePerLevel
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: enemyHealthPerLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: yLevelspawnVarition
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: baseTimeBetweenSpawns
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3687869638651247099, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: timeBetweenSpawns
@@ -3451,6 +3496,10 @@ PrefabInstance:
     - target: {fileID: 7799417569387853258, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799417569387853258, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

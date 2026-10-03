@@ -166,7 +166,7 @@ MonoBehaviour:
   animator: {fileID: 1820664813071738767}
   speed: 1.5
   health: 100
-  damage: 2
+  damage: 3
   mother: {fileID: 0}
   tower: {fileID: 0}
   direction: -1

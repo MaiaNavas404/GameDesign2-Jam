@@ -106,6 +106,7 @@ MonoBehaviour:
   _graphicsTransf: {fileID: 2073994579417419516}
   inactiveSprite: {fileID: 3231934834647757800, guid: 01cb25597cc277d48bc7dd3fde3ff4c9, type: 3}
   activeSprite: {fileID: 68870505326839212, guid: edbbd42c089b4e846a49da0c4695b6af, type: 3}
+  _maxHealth: 25
   _hoveredSizeMult: 1.05
   _draggedSizeMult: 1.1
   _hoverInfo: {fileID: 7293594672679375976}

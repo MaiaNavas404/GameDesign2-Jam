@@ -10,14 +10,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float yLevelspawnVarition;
     [SerializeField] private GameObject enemy;
     [SerializeField] private float baseTimeBetweenSpawns = 1f;
-    [SerializeField] private float lowerTimePerLevel = 0.02f;
+    [SerializeField] private float lowerTimePerLevel = 0.05f;
     [SerializeField] private float minimumTime = 0.25f;
     [SerializeField] private bool isGoingRight = false;
-    private float timeBetweenSpawns = 0;
+    [SerializeField] private float enemyBaseHealth = 100f;
+    [SerializeField] private float enemyHealthPerLevel = 20f;
+    private float enemyHealth;
+    private float timeBetweenSpawns;
     public static List<GameObject> enemies = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        enemyHealth = enemyBaseHealth;
         timeBetweenSpawns =  baseTimeBetweenSpawns;
     }
 
@@ -49,8 +53,10 @@ public class EnemySpawner : MonoBehaviour
         newEnemyScript.mother = this;
         if (isGoingRight)
             newEnemyScript.direction = 1;
-        EnemySpawner.enemies.Add(newEnemy);
+        newEnemyScript.health = enemyHealth;
+        enemies.Add(newEnemy);
         _timer = 0;
+        print($"{enemyHealth}.{timeBetweenSpawns}");
     }
 
     public void UpdateTimeBetweenSpawn()
@@ -60,5 +66,8 @@ public class EnemySpawner : MonoBehaviour
         {
             timeBetweenSpawns = minimumTime;
         }
+
+        enemyHealth += enemyHealthPerLevel;
+
     }
 }
