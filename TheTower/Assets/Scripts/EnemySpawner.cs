@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float yLevelspawnVarition;
     [SerializeField] private GameObject enemy;
     [SerializeField] private float timeBetweenSpawns = 0.25f;
+    public List<GameObject> enemies;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
@@ -18,7 +20,8 @@ public class EnemySpawner : MonoBehaviour
         if (_timer >= timeBetweenSpawns)
         {
             _spawnYLevelVariation = Random.Range(-yLevelspawnVarition/2, yLevelspawnVarition/2);
-            Instantiate(enemy,new Vector3(transform.position.x, transform.position.y + _spawnYLevelVariation, transform.position.z), Quaternion.identity);
+            GameObject newEnemy = Instantiate(enemy, new Vector3(transform.position.x, transform.position.y + _spawnYLevelVariation, transform.position.z), Quaternion.identity);
+            enemies.Add(newEnemy);
             _timer = 0;
         }
     }
@@ -26,5 +29,10 @@ public class EnemySpawner : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawCube(transform.position, new Vector3(0.25f, yLevelspawnVarition, 1));
+    }
+
+    public void RemoveEnemyFromList(GameObject enemyToRemove)
+    {
+        enemies.Remove(enemyToRemove);
     }
 }

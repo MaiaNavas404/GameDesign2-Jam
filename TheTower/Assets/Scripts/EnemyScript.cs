@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private BoxCollider2D attackTrigger;
     [SerializeField] private float speed = 10;
     [SerializeField] private float health = 100;
-    
+    public EnemySpawner mother;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
         Move();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -60,5 +60,12 @@ public class EnemyScript : MonoBehaviour
             animator.Play("attack");
         }
 
+    }
+
+    private void Die()
+    {
+        mother.RemoveEnemyFromList(gameObject);
+        Destroy(gameObject);
+        
     }
 }
