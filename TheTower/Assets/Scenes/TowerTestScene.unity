@@ -816,7 +816,7 @@ Transform:
   m_GameObject: {fileID: 683772394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -840,7 +840,7 @@ MonoBehaviour:
   _triggerTime: 0.2
   _maxFloors: 4
   _floorObject: {fileID: 5716451947171637413, guid: 6a348fe8686b0fd478a91f53ca0d22a8, type: 3}
-  BuffFloorAmount: 0
+  TriggerMultiplier: 1
 --- !u!61 &683772397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3047,7 +3047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33830538, g: 0.30461603, b: 0.6415094, a: 1}
+  m_Color: {r: 0.91194963, g: 0.32620832, b: 0.09463618, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

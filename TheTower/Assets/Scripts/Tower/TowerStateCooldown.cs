@@ -16,7 +16,7 @@ public partial class Tower
 
         public override void Update(float deltaTime)
         {
-            _timer -= deltaTime * (Context.BuffFloorAmount + 1);
+            _timer -= deltaTime;
             if (_timer < 0)
             {
                 FSM.ChangeTo(FSM.TriggeringState);
