@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class FloorCannon : FloorBase
 {
-    private GameObject TargetedEnemy;
+    private GameObject _targetedEnemy;
+    [SerializeField] private GameObject cannonBallPrefab;
     public override void Trigger()
     {
         base.Trigger();
-        TargetedEnemy = FindFirstEnemy();
-        
+        _targetedEnemy = FindFirstEnemy();
+        //Instantiate(cannonBallPrefab,transform.position,Quaternion.LookRotation());
 
     }
 
