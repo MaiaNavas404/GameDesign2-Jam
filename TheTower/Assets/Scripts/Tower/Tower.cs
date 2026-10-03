@@ -4,15 +4,18 @@ using UnityEngine;
 
 public partial class Tower : MonoBehaviour
 {
+    public static Tower Instance;
+
     [HideInInspector] public List<GameObject> _enemies;
     public EnemySpawner Spawner;
-    public static Tower Instance;
     [SerializeField]float _cooldownTime;
     [SerializeField]float _triggerTime;
     [SerializeField]int _maxFloors = 4;
     [SerializeField]GameObject _floorObject;
     List<FloorBase> _floors = new();
     [HideInInspector]public int floorAmount => _floors.Count;
+
+    [HideInInspector]public int BuffFloorAmount;
 
     TowerFSM _fsm;
 
