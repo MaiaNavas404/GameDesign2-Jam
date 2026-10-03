@@ -16,6 +16,6 @@ public class BloodFloor : FloorCannon
 
     private void CalculateLevel()
     {
-        _towerLevel = Mathf.FloorToInt(_health * 12 / _maxHealth);
+        _towerLevel = Mathf.FloorToInt( _maxHealth/_health) - 1;
     }
 }

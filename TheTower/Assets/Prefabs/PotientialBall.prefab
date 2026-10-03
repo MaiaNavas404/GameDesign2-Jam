@@ -103,7 +103,7 @@ MonoBehaviour:
   explosionRadius: 1.5
   damage: 15
   mass: 1
-  initialForce: 10
+  initialForce: 20
   forceDeviance: 1
-  damagemultiplier: 0.2
+  damagemultiplier: 0.5
   level: 0
