@@ -51,7 +51,7 @@ MonoBehaviour:
   explosionRadius: 3
   damage: 30
   mass: 1
-  initialForce: {x: 10, y: 3}
+  initialForce: {x: 20, y: 3}
   forceDeviance: {x: 1, y: 1}
 --- !u!58 &5613036977985676274
 CircleCollider2D:
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
