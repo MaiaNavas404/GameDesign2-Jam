@@ -24,10 +24,6 @@ public partial class Tower
         {
             _timer -= deltaTime;
 
-            Debug.Log((int)Context.TriggerMultiplier);
-            int triggerTimes = 0;
-            Context.TriggerMultiplier = 1;
-
             if (_timer < 0)
             {
                 if (Context._floors.Count != 0)
@@ -35,12 +31,12 @@ public partial class Tower
                     Context._floors[n].Trigger();
                 }
                 _timer = Context._triggerTime / 2;
-                triggerTimes--;
+                _triggerTimes--;
 
-                if (triggerTimes == 0)
+                if (_triggerTimes == 0)
                 {
                     Debug.Log((int)Context.TriggerMultiplier);
-                    triggerTimes = (int)Context.TriggerMultiplier;
+                    _triggerTimes = (int)Context.TriggerMultiplier;
                     Context.TriggerMultiplier = 1;
 
                     _timer = Context._triggerTime;
