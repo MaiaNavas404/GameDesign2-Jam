@@ -52,6 +52,8 @@ public class CardManager : MonoBehaviour
         {
             spawner.UpdateTimeBetweenSpawn();
         }
+
+        Time.timeScale = 0.001f;
         List<int> drawnCards = new();
         for (int i = 0; i < 3; i++)
         {
@@ -71,6 +73,7 @@ public class CardManager : MonoBehaviour
 
     public void OnCardSelected()
     {
+        Time.timeScale = 1f;
         foreach(SelectableCard sc in _selectableCards)
         {
             sc.gameObject.SetActive(false);

@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float minimumTime = 0.25f;
     [SerializeField] private bool isGoingRight = false;
     private float timeBetweenSpawns = 0;
-    public List<GameObject> enemies;
+    public static List<GameObject> enemies = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
         newEnemyScript.mother = this;
         if (isGoingRight)
             newEnemyScript.direction = 1;
-        enemies.Add(newEnemy);
+        EnemySpawner.enemies.Add(newEnemy);
         _timer = 0;
     }
 

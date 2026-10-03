@@ -82,7 +82,7 @@ public partial class Tower : MonoBehaviour
     
     void Update()
     {
-        _enemies = Spawner.enemies;
+        _enemies = EnemySpawner.enemies;
         _fsm.Update(Time.deltaTime);
     }
 

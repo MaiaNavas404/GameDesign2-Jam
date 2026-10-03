@@ -7,7 +7,7 @@ public class FloorCannon : FloorBase
     public override void Trigger()
     {
         base.Trigger();
-        if (Tower.Instance._enemies.Count != 0)
+        if (EnemySpawner.enemies.Count != 0)
         {
             _targetedEnemy = FindFirstEnemy();
             Attack();

@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _enemies: []
-  Spawner: {fileID: 698278065}
+  Spawner: {fileID: 2037004559}
   _cooldownTime: 1
   _triggerTime: 0.2
   _maxFloors: 4
@@ -887,17 +887,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 10}
   m_EdgeRadius: 0
---- !u!114 &698278065 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3687869638651247099, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
-  m_PrefabInstance: {fileID: 778730629}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b9be6c689e89142b5760ba488366f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!1 &708091354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+      propertyPath: yLevelspawnVarition
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3687869638651247099, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
       propertyPath: timeBetweenSpawns
       value: 0.25
@@ -2751,6 +2744,7 @@ MonoBehaviour:
   _expGainSpeed: 12.5
   _fullTowerMessage: {fileID: 138630795}
   _skipButton: {fileID: 180531814}
+  spawners: []
 --- !u!1 &1845510334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,6 +3066,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978575901}
   m_CullTransparentMesh: 1
+--- !u!114 &2037004559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 617999425705648191, guid: d6d12959cf7d2d548aff6ecd59235f8b, type: 3}
+  m_PrefabInstance: {fileID: 778730629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b9be6c689e89142b5760ba488366f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!1 &2077864793
 GameObject:
   m_ObjectHideFlags: 0
